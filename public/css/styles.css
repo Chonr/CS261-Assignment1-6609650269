@@ -28,7 +28,6 @@ p {
 .top-bar {
     background-color: #6e8b89; /* สีพื้นหลังของแถบ */
     padding: 10px; /* ระยะห่างภายใน */
-    text-align: center; /* จัดข้อความให้อยู่กลาง */
     border-radius: 16px 16px 0 0; /* มุมโค้งเฉพาะด้านบน */
     border: 1.5px solid #483836;
 }
@@ -86,6 +85,27 @@ button:hover {
     border-radius: 20px; /* มุมโค้งของปุ่ม */
     border: 2px solid #483836; /* เส้นขอบ */
     max-width: 150px;
+}
+
+
+.login-button {
+    background-color: #90cb92; /* สีเขียวสำหรับปุ่ม Login */
+}
+
+.hello-button {
+    background-color: #6e8b89; /* สีน้ำเงินสำหรับปุ่ม Hello */
+}
+
+.request-button {
+    background-color: #5482a8; /* สีส้มสำหรับปุ่ม Request Form */
+}
+
+.logout-button {
+    background-color: #df635a; /* สีแดงสำหรับปุ่ม Logout */
+}
+
+button:hover {
+    opacity: 0.9; /* เพิ่มความโปร่งใสเมื่อวางเมาส์ */
 }
 
 
