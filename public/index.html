@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
@@ -8,15 +9,47 @@
 </head>
 <body>
     <div class="login-container">
-        <h1>Login</h1>
+        <div class="top-bar"><br></div>
+        <br>
+        <div class="header">
+            <img src="img/mypic1.jpg" alt="Profile Picture" class="profile-image">
+            <div class="header-text">
+                <h1>Login Page</h1>
+                <p><b>Name:</b>&nbsp;&nbsp;&nbsp;ชลธาร ศิลปาจารย์</p>
+            </div>
+        </div>
+        <br>
         <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required autocomplete="username">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required autocomplete="current-password">
+            
+            <label for="role">Role</label>
+            <select id="role" required >
+                <option value="" disabled selected>&nbsp;Select your role</option>
+                <option value="student">Student</option>
+                <option value="lecturer">Lecturer</option>
+            </select>
+            <br>
             <button type="button" onclick="submitLogin()">Login</button>
             <button type="button" onclick="call_REST_API_Hello()">Hello</button>
+
+
+            
         </form>
+
+
+
+
+        <div class="bottom-buttons">
+            <button type="button" onclick="requestForm()">Request Form</button>
+            <div class="spacer"></div>
+            <button type="button" onclick="logout()">Logout</button>
+        </div>
+        
+
         <p id="message"></p>
     </div>
     <script src="js/script.js"></script>
