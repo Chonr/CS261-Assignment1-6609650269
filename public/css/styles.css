@@ -1,20 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #99aea7;
+}
+
+input {
+    font-size: 18px;
+}
+
+p {
+    font-size: 18px;
 }
 
 .login-container {
-    width: 300px;
+    width: 470px;
     margin: 100px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    background-color: #e1d4bf;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #8ea39c;
+    border: 3px solid #483836; /* เส้นขอบ */
+}
+
+.top-bar {
+    background-color: #6e8b89; /* สีพื้นหลังของแถบ */
+    padding: 10px; /* ระยะห่างภายใน */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    border-radius: 16px 16px 0 0; /* มุมโค้งเฉพาะด้านบน */
+    border: 1.5px solid #483836;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: auto;
+    margin-bottom: 10px;
 }
 
 label {
@@ -25,23 +42,98 @@ label {
 input {
     width: 100%;
     padding: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
+    width: 60%;
+    padding: 8px;
+    background-color: #6e8b89;
+    border-radius: 20px;
     color: #fff;
     cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #a4bebc;
 }
 
 #message {
     margin-top: 20px;
     text-align: center;
 }
+
+.bottom-buttons {
+    display: flex; /* ใช้ Flexbox */
+    justify-content: space-between; /* ปุ่มอยู่ซ้ายและขวา */
+    align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
+    margin-top: 15px; /* ระยะห่างด้านบน */
+    padding: 0 20px;
+    
+}
+
+.bottom-buttons button {
+    font-size: 18px; /* ขนาดฟอนต์ของปุ่ม */
+    padding: 10px 5px; /* ขนาด padding ของปุ่ม */
+    border-radius: 20px; /* มุมโค้งของปุ่ม */
+    border: 2px solid #483836; /* เส้นขอบ */
+    max-width: 150px;
+}
+
+
+form input, form select {
+    width: 60%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 20px;
+    border: 2px solid #483836;
+    box-sizing: border-box;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* จัดให้เป็นแนวตั้ง */
+    align-items: center; /* จัดให้ตรงกลาง */
+    padding: 20px;
+}
+
+.header {
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียง */
+    align-items: auto; /* จัดให้อยู่กลางในแนวตั้ง */
+}
+
+.profile-image {
+    width: 120px; /* กำหนดขนาดรูปภาพ */
+    height: 120px; /* กำหนดความสูงของรูปภาพให้เท่ากัน */
+    border-radius: 50%; /* ทำให้รูปภาพเป็นวงกลม */
+    object-fit: cover; /* ปรับอัตราส่วนภาพให้เหมาะสม */
+    margin-right: 40px; /* ระยะห่างด้านขวาของรูปภาพ */
+    border: 3px solid #483836;
+    margin-left: 30px;
+}
+
+.header-text {
+    flex-grow: 1; /* ขยายพื้นที่ของข้อความ */
+    
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    background-color: #fbf2db; /* สีพื้นหลัง */
+}
+
+#KlIFrameId {
+    border: 0;
+    height: 450px;
+    width: 397px;
+    left: 869px;
+    top: 264px;
+    z-index: 2147483647;
+    position: absolute;
+}
+
+
