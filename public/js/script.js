@@ -37,3 +37,16 @@ function call_REST_API_Hello() {
     })
     .catch(error => console.error('Error:', error));
 }
+
+function requestForm() {
+    location.reload();
+}
+
+function logout() {
+    localStorage.removeItem('token'); 
+    alert("You have been logged out."); 
+    
+    document.getElementById('username').value = ''; 
+    document.getElementById('password').value = ''; 
+    document.getElementById('role').selectedIndex = 0;
+}
