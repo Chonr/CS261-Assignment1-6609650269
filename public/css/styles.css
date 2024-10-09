@@ -4,15 +4,19 @@ body {
 }
 
 input {
-    font-size: 18px;
+    font-size: 16px;
+}
+
+select {
+    font-size: 16px;
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .login-container {
-    width: 470px;
+    width: 500px;
     margin: 100px auto;
     padding: 0px;
     background-color: #e1d4bf;
@@ -35,8 +39,10 @@ h1 {
 }
 
 label {
-    display: block;
-    margin: 10px 0 5px;
+    width: 55%;
+    margin: 5px 0; /* ระยะห่างระหว่าง label กับ input/select */
+    text-align: left; /* จัดข้อความให้ชิดซ้าย */
+    font-weight: bold; /* เพิ่มความหนาของข้อความ */
 }
 
 input {
@@ -52,7 +58,7 @@ button {
     border-radius: 20px;
     color: #fff;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
@@ -103,16 +109,17 @@ form {
 .header {
     display: flex; /* ใช้ Flexbox เพื่อจัดเรียง */
     align-items: auto; /* จัดให้อยู่กลางในแนวตั้ง */
+    margin: 5px auto;
 }
 
 .profile-image {
-    width: 120px; /* กำหนดขนาดรูปภาพ */
-    height: 120px; /* กำหนดความสูงของรูปภาพให้เท่ากัน */
+    width: 130px; /* กำหนดขนาดรูปภาพ */
+    height: 130px; /* กำหนดความสูงของรูปภาพให้เท่ากัน */
     border-radius: 50%; /* ทำให้รูปภาพเป็นวงกลม */
     object-fit: cover; /* ปรับอัตราส่วนภาพให้เหมาะสม */
     margin-right: 40px; /* ระยะห่างด้านขวาของรูปภาพ */
     border: 3px solid #483836;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .header-text {
