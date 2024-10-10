@@ -57,4 +57,6 @@ function logout() {
     document.getElementById('username').value = ''; 
     document.getElementById('password').value = ''; 
     document.getElementById('role').selectedIndex = 0;
+
+    document.getElementById('message').innerText = '';
 }
