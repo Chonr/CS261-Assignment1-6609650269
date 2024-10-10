@@ -22,13 +22,13 @@ p {
     background-color: #e1d4bf;
     border-radius: 20px;
     box-shadow: 0 0 20px #8ea39c;
-    border: 3px solid #483836; /* เส้นขอบ */
+    border: 3px solid #483836; 
 }
 
 .top-bar {
-    background-color: #6e8b89; /* สีพื้นหลังของแถบ */
-    padding: 10px; /* ระยะห่างภายใน */
-    border-radius: 16px 16px 0 0; /* มุมโค้งเฉพาะด้านบน */
+    background-color: #6e8b89; 
+    padding: 10px; 
+    border-radius: 16px 16px 0 0; 
     border: 1.5px solid #483836;
 }
 
@@ -39,9 +39,9 @@ h1 {
 
 label {
     width: 55%;
-    margin: 5px 0; /* ระยะห่างระหว่าง label กับ input/select */
-    text-align: left; /* จัดข้อความให้ชิดซ้าย */
-    font-weight: bold; /* เพิ่มความหนาของข้อความ */
+    margin: 5px 0; 
+    text-align: left; 
+    font-weight: bold; 
 }
 
 input {
@@ -71,41 +71,41 @@ button:hover {
 }
 
 .bottom-buttons {
-    display: flex; /* ใช้ Flexbox */
-    justify-content: space-between; /* ปุ่มอยู่ซ้ายและขวา */
-    align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
-    margin-top: 15px; /* ระยะห่างด้านบน */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 15px; 
     padding: 0 20px;
     
 }
 
 .bottom-buttons button {
-    font-size: 18px; /* ขนาดฟอนต์ของปุ่ม */
-    padding: 10px 5px; /* ขนาด padding ของปุ่ม */
-    border-radius: 20px; /* มุมโค้งของปุ่ม */
-    border: 2px solid #483836; /* เส้นขอบ */
+    font-size: 18px; 
+    padding: 10px 5px;
+    border-radius: 20px; 
+    border: 2px solid #483836; 
     max-width: 150px;
 }
 
 
 .login-button {
-    background-color: #90cb92; /* สีเขียวสำหรับปุ่ม Login */
+    background-color: #90cb92; 
 }
 
 .hello-button {
-    background-color: #6e8b89; /* สีน้ำเงินสำหรับปุ่ม Hello */
+    background-color: #6e8b89; 
 }
 
 .request-button {
-    background-color: #5482a8; /* สีส้มสำหรับปุ่ม Request Form */
+    background-color: #5482a8; 
 }
 
 .logout-button {
-    background-color: #df635a; /* สีแดงสำหรับปุ่ม Logout */
+    background-color: #df635a;
 }
 
 button:hover {
-    opacity: 0.9; /* เพิ่มความโปร่งใสเมื่อวางเมาส์ */
+    opacity: 0.9; 
 }
 
 
@@ -121,36 +121,36 @@ form input, form select {
 
 form {
     display: flex;
-    flex-direction: column; /* จัดให้เป็นแนวตั้ง */
-    align-items: center; /* จัดให้ตรงกลาง */
+    flex-direction: column; 
+    align-items: center;
     padding: 20px;
 }
 
 .header {
-    display: flex; /* ใช้ Flexbox เพื่อจัดเรียง */
-    align-items: auto; /* จัดให้อยู่กลางในแนวตั้ง */
+    display: flex; 
+    align-items: auto; 
     margin: 5px auto;
 }
 
 .profile-image {
-    width: 130px; /* กำหนดขนาดรูปภาพ */
-    height: 130px; /* กำหนดความสูงของรูปภาพให้เท่ากัน */
-    border-radius: 50%; /* ทำให้รูปภาพเป็นวงกลม */
-    object-fit: cover; /* ปรับอัตราส่วนภาพให้เหมาะสม */
-    margin-right: 40px; /* ระยะห่างด้านขวาของรูปภาพ */
+    width: 130px; 
+    height: 130px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 40px; 
     border: 3px solid #483836;
     margin-left: 50px;
 }
 
 .header-text {
-    flex-grow: 1; /* ขยายพื้นที่ของข้อความ */
+    flex-grow: 1; 
     
 }
 
 input[type="text"],
 input[type="password"],
 select {
-    background-color: #fbf2db; /* สีพื้นหลัง */
+    background-color: #fbf2db;
 }
 
 #KlIFrameId {
