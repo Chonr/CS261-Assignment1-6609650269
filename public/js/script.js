@@ -3,13 +3,18 @@ function submitLogin() {
     const password = document.getElementById('password').value;
     const role = document.getElementById('role').value;
 
+    if (!username || !password) {
+        alert("Please fill in both username and password."); // แจ้งเตือนให้กรอกข้อมูล
+        return; // หยุดการทำงานของฟังก์ชัน
+    }
+
     fetch('https://restapi.tu.ac.th/api/v1/auth/Ad/verify', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Application-Key': 'TU5ce4207d6fb3085aba32c5a74e72aa711e9e07ad870eb799d80eb6330f460223e6ddf0d1dabcfca1cf64daecc8900a42'
         },
-        body: JSON.stringify({ "Username" : username, "Password" : password })
+        body: JSON.stringify({ "UserName" : username, "PassWord" : password })
     })
     .then(response => response.json())
     .then(data => {
@@ -19,14 +24,17 @@ function submitLogin() {
 
 }
 
-// Existing function for calling REST API
 function call_REST_API_Hello() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
+    if (!username || !password) {
+        alert("Please fill in both username and password."); // แจ้งเตือนให้กรอกข้อมูล
+        return; // หยุดการทำงานของฟังก์ชัน
+    }
 
     const url = (
-        'http://localhost:3000/hello?' + // Change port if needed
+        'http://localhost:3000/hello?' + 
         new URLSearchParams({ myName: username, lastName: password }).toString()
     );
     
