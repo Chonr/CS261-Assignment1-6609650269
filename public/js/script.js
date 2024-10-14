@@ -4,8 +4,21 @@ function submitLogin() {
     const role = document.getElementById('role').value;
 
     if (!username || !password) {
-        alert("Please fill in both username and password."); // แจ้งเตือนให้กรอกข้อมูล
-        return; // หยุดการทำงานของฟังก์ชัน
+        alert("Please fill in both username and password."); 
+        return; 
+    }
+
+    const isNumericUsername = /^\d{10}$/.test(username);
+    const containsNonNumeric = /[^0-9]/.test(username);
+
+    if (isNumericUsername && role !== 'student') {
+        alert("Please select a valid role."); 
+        return; 
+    }
+
+    if (containsNonNumeric && role !== 'lecturer') {
+        alert("Please select a valid role."); 
+        return; 
     }
 
     fetch('https://restapi.tu.ac.th/api/v1/auth/Ad/verify', {
@@ -29,8 +42,8 @@ function call_REST_API_Hello() {
     const password = document.getElementById('password').value;
 
     if (!username || !password) {
-        alert("Please fill in both username and password."); // แจ้งเตือนให้กรอกข้อมูล
-        return; // หยุดการทำงานของฟังก์ชัน
+        alert("Please fill in both username and password."); 
+        return; 
     }
 
     const url = (
