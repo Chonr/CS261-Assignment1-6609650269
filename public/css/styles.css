@@ -72,14 +72,14 @@ button:hover {
 }
 
 .message-box {
-    border: 2px solid #483836; /* กรอบสีเขียว */
-    padding: 20px; /* ระยะห่างภายใน */
-    margin: 20px 5%; /* ระยะห่างด้านบนและล่าง */
-    border-radius: 8px; /* มุมกรอบโค้ง */
-    background-color: #deebbe; /* สีพื้นหลังอ่อน */
-    font-size: 15px; /* ขนาดตัวอักษร */
-    color: #483836; /* สีตัวอักษร */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาที่กล่อง */
+    border: 2px solid #483836;
+    padding: 20px; 
+    margin: 20px 5%; 
+    border-radius: 8px; 
+    background-color: #deebbe;
+    font-size: 15px; 
+    color: #483836; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     text-align: left;
 }
 
@@ -162,4 +162,28 @@ select {
     background-color: #fbf2db;
 }
 
+.field_indicator {
 
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+
+.password-container {
+    position: relative;
+    width: 100%; 
+}
+
+.field_indicator {
+    position: absolute;
+    top: 52.5%;
+    right: 41.5%; 
+    transform: translateY(-50%);
+    background: transparent; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 20px; 
+}

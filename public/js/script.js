@@ -1,3 +1,19 @@
+document.getElementById('togglePassword').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text'; // Show password
+        eyeIcon.classList.remove('ri-eye-off-fill'); 
+        eyeIcon.classList.add('ri-eye-fill'); 
+    } else {
+        passwordField.type = 'password'; // Hide password
+        eyeIcon.classList.remove('ri-eye-fill'); 
+        eyeIcon.classList.add('ri-eye-off-fill'); 
+    }
+});
+
+
 function submitLogin() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -64,12 +80,11 @@ function submitLogin() {
                 `;
             }
     
-            // แสดงรายละเอียดในกล่อง
             document.getElementById('response').innerText = details;
-            document.getElementById('response').style.display = 'block'; // แสดงกล่อง
+            document.getElementById('response').style.display = 'block'; 
         } else {
             document.getElementById('message').innerText = `Login failed: ${data.message}`;
-            document.getElementById('response').style.display = 'none'; // ซ่อนกล่องถ้าล้มเหลว
+            document.getElementById('response').style.display = 'none'; 
         }
     })
     .catch(error => console.error('Error:', error));
