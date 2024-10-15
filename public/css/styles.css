@@ -66,8 +66,21 @@ button:hover {
 }
 
 #message {
-    margin-top: 20px;
+    margin: 20px 20px;
     text-align: center;
+    font-size: 20px;
+}
+
+.message-box {
+    border: 2px solid #483836; /* กรอบสีเขียว */
+    padding: 20px; /* ระยะห่างภายใน */
+    margin: 20px 5%; /* ระยะห่างด้านบนและล่าง */
+    border-radius: 8px; /* มุมกรอบโค้ง */
+    background-color: #deebbe; /* สีพื้นหลังอ่อน */
+    font-size: 15px; /* ขนาดตัวอักษร */
+    color: #483836; /* สีตัวอักษร */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาที่กล่อง */
+    text-align: left;
 }
 
 .bottom-buttons {
@@ -148,6 +161,5 @@ input[type="password"],
 select {
     background-color: #fbf2db;
 }
-
 
 
