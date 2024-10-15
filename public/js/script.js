@@ -83,7 +83,7 @@ function submitLogin() {
             document.getElementById('response').innerText = details;
             document.getElementById('response').style.display = 'block'; 
         } else {
-            document.getElementById('message').innerText = `Login failed: ${data.message}`;
+            document.getElementById('message').innerText = `${data.message}`;
             document.getElementById('response').style.display = 'none'; 
         }
     })
