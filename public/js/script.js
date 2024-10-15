@@ -32,9 +32,49 @@ function submitLogin() {
     .then(response => response.json())
     .then(data => {
         document.getElementById('message').innerText = data.message;
+
+        let details = '';
+        
+        if (data.status) {
+            if (data.type === 'student') {
+                details += `
+                    Status: ${data.status}
+                    Type: ${data.type}
+                    Username: ${data.username}
+                    Status: ${data.tu_status}
+                    Status ID: ${data.statusid || 'N/A'}
+                    Display Name (TH): ${data.displayname_th}
+                    Display Name (EN): ${data.displayname_en}
+                    Email: ${data.email}
+                    Department: ${data.department || 'N/A'}
+                    Faculty: ${data.faculty || 'N/A'}
+                `;
+            } else if (data.type === 'employee') {
+                details += `
+                    Status: ${data.status}
+                    Type: ${data.type}
+                    Username: ${data.username}
+                    Display Name (TH): ${data.displayname_th}
+                    Display Name (EN): ${data.displayname_en}
+                    Work Status: ${data.StatusWork} (${data.StatusWork == '0' ? 'ลาออก' : data.StatusWork == '1' ? 'ปฏิบัติงาน' : 'ไม่ปฏิบัติงาน'})
+                    Employee Status: ${data.StatusEmp}
+                    Email: ${data.email}
+                    Department: ${data.department || 'N/A'}
+                    Organization: ${data.organization || 'N/A'}
+                `;
+            }
+    
+            // แสดงรายละเอียดในกล่อง
+            document.getElementById('response').innerText = details;
+            document.getElementById('response').style.display = 'block'; // แสดงกล่อง
+        } else {
+            document.getElementById('message').innerText = `Login failed: ${data.message}`;
+            document.getElementById('response').style.display = 'none'; // ซ่อนกล่องถ้าล้มเหลว
+        }
     })
     .catch(error => console.error('Error:', error));
 
+    
 }
 
 function requestForm() {
