@@ -19,21 +19,41 @@ function submitLogin() {
     const password = document.getElementById('password').value;
     const role = document.getElementById('role').value;
 
-    if (!username || !password) {
-        alert("Please fill in both username and password."); 
-        return; 
+    // Clear previous error messages
+    document.getElementById('usernameError').innerText = '';
+    document.getElementById('passwordError').innerText = '';
+
+    let isValid = true; // Flag to track validity
+
+    if (!username) {
+        document.getElementById('usernameError').innerText = "Please enter your username."; 
+        isValid = false; // Mark as invalid
+    }
+
+    if (!password) {
+        document.getElementById('passwordError').innerText = "Please enter your password."; 
+        isValid = false; // Mark as invalid
+    }
+
+    if (!role) {
+        document.getElementById('roleError').innerText = "Please select your role."; 
+        isValid = false; // Mark as invalid
+    }
+
+    if (!isValid) {
+        return; // Stop if there are validation errors
     }
 
     const isNumericUsername = /^\d{10}$/.test(username);
     const containsNonNumeric = /[^0-9]/.test(username);
 
     if (isNumericUsername && role !== 'student') {
-        alert("Please select a valid role."); 
+        document.getElementById('roleError').innerText = "Please select a valid role."; 
         return; 
     }
 
     if (containsNonNumeric && role !== 'lecturer') {
-        alert("Please select a valid role."); 
+        document.getElementById('roleError').innerText = "Please select a valid role."; 
         return; 
     }
 

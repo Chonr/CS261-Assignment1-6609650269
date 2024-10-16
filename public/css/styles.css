@@ -174,16 +174,26 @@ select {
 
 .password-container {
     position: relative;
-    width: 100%; 
+    width: 100%; /* ให้ฟิลด์รหัสผ่านเต็มความกว้างของ container */
+    margin-bottom: 5px; /* ระยะห่างด้านล่าง */
+    display: flex; /* ใช้ flexbox */
+    align-items: center; /* จัดแนวกลางในแนวตั้ง */
+    justify-content: center; /* จัดแนวกลางในแนวนอน */
 }
 
 .field_indicator {
     position: absolute;
     top: 52.5%;
-    right: 41.5%; 
+    right: 23%; 
     transform: translateY(-50%);
     background: transparent; 
     border: none; 
     cursor: pointer; 
     font-size: 20px; 
+}
+
+.error-message {
+    color: red;
+    font-size: 14px; /* Smaller font for error messages */
+    margin-top: 0px; /* Adjusts spacing between input and error message */
 }

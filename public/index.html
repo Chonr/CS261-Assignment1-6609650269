@@ -24,12 +24,15 @@
         <form id="loginForm">
             <label for="username">Username :</label>
             <input type="text" id="username" placeholder="Enter your username" name="username" required>
+            <span id="usernameError" class="error-message"></span>
             
             <label for="password">Password :</label>
+            <div class="password-container">
             <input type="password" id="password" class="field_password js password-field" placeholder="Enter your password" name="password" required>
             <div class="field_indicator" id="togglePassword">
                 <i class="ri-eye-off-fill" id="eyeIcon"></i>
-            </div>
+            </div></div>
+            <span id="passwordError" class="error-message"></span>
 
             <label for="role">Role :</label>
             <select id="role" required >
@@ -37,6 +40,7 @@
                 <option value="student">Student</option>
                 <option value="lecturer">Lecturer</option>
             </select>
+            <span id="roleError" class="error-message"></span>
             <br>
             <button type="button" class="login-button" onclick="submitLogin()">Login</button>
             
