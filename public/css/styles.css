@@ -162,16 +162,6 @@ select {
     background-color: #fbf2db;
 }
 
-.field_indicator {
-
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-
-}
-
 .password-container {
     position: relative;
     width: 100%; /* ให้ฟิลด์รหัสผ่านเต็มความกว้างของ container */
