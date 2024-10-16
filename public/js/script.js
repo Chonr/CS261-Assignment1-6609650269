@@ -19,29 +19,28 @@ function submitLogin() {
     const password = document.getElementById('password').value;
     const role = document.getElementById('role').value;
 
-    // Clear previous error messages
     document.getElementById('usernameError').innerText = '';
     document.getElementById('passwordError').innerText = '';
 
-    let isValid = true; // Flag to track validity
+    let isValid = true; 
 
     if (!username) {
         document.getElementById('usernameError').innerText = "Please enter your username."; 
-        isValid = false; // Mark as invalid
+        isValid = false; 
     }
 
     if (!password) {
         document.getElementById('passwordError').innerText = "Please enter your password."; 
-        isValid = false; // Mark as invalid
+        isValid = false;
     }
 
     if (!role) {
         document.getElementById('roleError').innerText = "Please select your role."; 
-        isValid = false; // Mark as invalid
+        isValid = false; 
     }
 
     if (!isValid) {
-        return; // Stop if there are validation errors
+        return; 
     }
 
     const isNumericUsername = /^\d{10}$/.test(username);
