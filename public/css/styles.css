@@ -164,11 +164,11 @@ select {
 
 .password-container {
     position: relative;
-    width: 100%; /* ให้ฟิลด์รหัสผ่านเต็มความกว้างของ container */
-    margin-bottom: 5px; /* ระยะห่างด้านล่าง */
-    display: flex; /* ใช้ flexbox */
-    align-items: center; /* จัดแนวกลางในแนวตั้ง */
-    justify-content: center; /* จัดแนวกลางในแนวนอน */
+    width: 100%; 
+    margin-bottom: 5px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .field_indicator {
@@ -184,6 +184,6 @@ select {
 
 .error-message {
     color: red;
-    font-size: 14px; /* Smaller font for error messages */
-    margin-top: 0px; /* Adjusts spacing between input and error message */
+    font-size: 14px; 
+    margin-top: 0px; 
 }
