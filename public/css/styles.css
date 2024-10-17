@@ -20,7 +20,7 @@ p {
     margin: 100px auto;
     padding: 0px;
     background-color: #e1d4bf;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 0 0 20px #8ea39c;
     border: 3px solid #483836; 
 }
@@ -28,7 +28,7 @@ p {
 .top-bar {
     background-color: #6e8b89; 
     padding: 10px; 
-    border-radius: 16px 16px 0 0; 
+    border-radius: 25px 25px 0 0; 
     border: 1.5px solid #483836;
 }
 
@@ -187,3 +187,20 @@ select {
     font-size: 14px; 
     margin-top: 0px; 
 }
+
+#openButton {
+    background-color: #8f977b;
+    color: white;
+    padding: 10px; 
+    border-radius: 0 0 25px 25px; 
+    
+    font-size: 16px;
+    margin-bottom: 0px;
+    transition: background-color 0.1s ease; 
+    width: 100%; 
+}
+
+#openButton:hover {
+    background-color: #deebbe; 
+}
+

@@ -1,3 +1,16 @@
+function toggleDetails() {
+    const responseDiv = document.getElementById('response');
+    const openButton = document.getElementById('openButton');
+    
+    if (responseDiv.style.display === 'block') {
+        responseDiv.style.display = 'none';
+        openButton.innerText = 'Open';
+    } else {
+        responseDiv.style.display = 'block';
+        openButton.innerText = 'Close';
+    }
+}
+
 document.getElementById('togglePassword').addEventListener('click', function () {
     const passwordField = document.getElementById('password');
     const eyeIcon = document.getElementById('eyeIcon');
@@ -12,6 +25,7 @@ document.getElementById('togglePassword').addEventListener('click', function () 
         eyeIcon.classList.add('ri-eye-off-fill'); 
     }
 });
+
 
 
 function submitLogin() {
@@ -72,6 +86,10 @@ function submitLogin() {
         
         if (data.status) {
             if (data.type === 'student') {
+
+                document.getElementById('displayNameTH').innerText = `Name: ${data.displayname_th}`;
+                document.getElementById('status').innerText = `Status: ${data.tu_status}`;
+
                 details += `
                     Status: ${data.status}
                     Type: ${data.type}
@@ -85,6 +103,10 @@ function submitLogin() {
                     Faculty: ${data.faculty || 'N/A'}
                 `;
             } else if (data.type === 'employee') {
+
+                document.getElementById('displayNameTH').innerText = `Name: ${data.displayname_th}`;
+                document.getElementById('status').innerText = `Status: ${data.StatusEmp}`;
+ 
                 details += `
                     Status: ${data.status}
                     Type: ${data.type}
@@ -100,10 +122,10 @@ function submitLogin() {
             }
     
             document.getElementById('response').innerText = details;
-            document.getElementById('response').style.display = 'block'; 
+            document.getElementById('openButton').style.display = 'block';
         } else {
             document.getElementById('message').innerText = `${data.message}`;
-            document.getElementById('response').style.display = 'none'; 
+            document.getElementById('openButton').style.display = 'none'; 
         }
     })
     .catch(error => console.error('Error:', error));

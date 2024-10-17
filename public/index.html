@@ -14,10 +14,11 @@
         <div class="top-bar"><br></div>
         <br>
         <div class="header">
-            <img src="img/mypic1.jpg" alt="Profile Picture" class="profile-image">
+            <img src="img/tu-logo.png" alt="Profile Picture" class="profile-image">
             <div class="header-text">
                 <h1>Login Page</h1>
-                <p><b>Name:</b>&nbsp;&nbsp;&nbsp;ชลธาร ศิลปาจารย์</p>
+                <p id="displayNameTH"></p>
+                <p id="status"></p>
             </div>
         </div>
         
@@ -54,6 +55,7 @@
         
 
         <div id="message"></div>
+        <button id="openButton" onclick="toggleDetails()" style="display:none;">Open</button>
         <div id="response" class="message-box" style="display: none;"></div>
     </div>
     <script src="js/script.js"></script>
